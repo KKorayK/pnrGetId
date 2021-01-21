@@ -12,8 +12,8 @@ import (
 )
 
 var (
-	steamUrl   = "http://steamcommunity.com/games/1029630/members?p="
-	eversimUrl = "http://eversim.com/_geol/_geolreg_p19_sr.php"
+	steamUrl   = "http://steamcommunity.com/games/1379930/members?p="
+	eversimUrl = "http://eversim.com/_geol/_geolreg_p20_sr.php"
 	re         = regexp.MustCompile("steamcommunity.com/profiles/(.*)'")
 	keyFound   = false
 	bytes      []byte
@@ -21,7 +21,7 @@ var (
 
 func main() {
 	fmt.Println("Start server...")
-	http.HandleFunc("/_geol/_geolreg_p19_sr.php", geolreg)
+	http.HandleFunc("/_geol/_geolreg_p20_sr.php", geolreg)
 	if err := http.ListenAndServe(":80", nil); err != nil {
 		log.Fatal(err)
 	}
